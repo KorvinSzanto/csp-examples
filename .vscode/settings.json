@@ -1,0 +1,18 @@
+{
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "build/.+$",
+                "cmd": "php build.php"
+            },
+            {
+                "match": "template.html$",
+                "cmd": "php build.php"
+            },
+            {
+                "match": "build.php$",
+                "cmd": "php build.php"
+            }
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+<div class="grid">
+            <div>
+            <iframe src="/dist/0-allow-everything.html"></iframe>
+            <a href='/dist/0-allow-everything.html'>allow everything</a>
+        </div>
+                <div>
+            <iframe src="/dist/0-disallow-everything.html"></iframe>
+            <a href='/dist/0-disallow-everything.html'>disallow everything</a>
+        </div>
+                <div>
+            <iframe src="/dist/10-data-urls-allowed.html"></iframe>
+            <a href='/dist/10-data-urls-allowed.html'>data urls allowed</a>
+        </div>
+                <div>
+            <iframe src="/dist/http-only.html"></iframe>
+            <a href='/dist/http-only.html'>http only</a>
+        </div>
+                <div>
+            <iframe src="/dist/inline-scripts-allowed.html"></iframe>
+            <a href='/dist/inline-scripts-allowed.html'>inline scripts allowed</a>
+        </div>
+                <div>
+            <iframe src="/dist/specific-external-sites-only.html"></iframe>
+            <a href='/dist/specific-external-sites-only.html'>specific external sites only</a>
+        </div>
+        </div>
+<style>
+* {
+    font-family: sans-serif;
+}
+
+.grid > div {
+    display: inline-block;
+    width: 350px;
+    height: 400px;
+    background-color: #eee;
+    border: solid 1px #aaa;
+    text-align: center;
+    overflow:hidden;
+    margin: .5rem;
+    text-transform: capitalize;
+    line-height: 1.75rem;
+    font-size: 1rem;
+}
+.grid > div > iframe {
+    background-color: white;
+    height: calc(400px - 1.75rem);
+    width: 100%;
+    border: none;
+}
+</style>
