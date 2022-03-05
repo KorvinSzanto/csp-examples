@@ -4,8 +4,8 @@
         if ($example[0] === '.') continue;
         ?>
         <div>
-            <iframe src="/dist/<?= $example ?>"></iframe>
-            <a href='/dist/<?= $example ?>'><?= trim(str_replace('-', ' ', substr($example, 0, -5)), '0123456789 ') ?></a>
+            <iframe src="dist/<?= $example ?>"></iframe>
+            <a href='dist/<?= $example ?>'><?= trim(str_replace('-', ' ', substr($example, 0, -5)), '0123456789 ') ?></a>
         </div>
         <?php
     }
