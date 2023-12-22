@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Security-Policy" content="default-src data:">
 
-<table style="color: red">
+<table>
     <tr><th></th><th></th><th>onload</th><th>onerror</th></tr>
     <tr>
         <td width="100%">Local URL</td>
@@ -42,6 +42,7 @@
     <tr><td>Remote HTTP</td><td><input type='checkbox' id='remoteHttpScriptTest' disabled /></td><td><span id='remoteHttpStyleTest'>❌</span></td></tr>
     <tr><td>Remote HTTPS</td><td><input type='checkbox' id='remoteScriptTest' disabled /></td><td><span id='remoteStyleTest'>❌</span></td></tr>
     <tr><td>Data URL</td><td><input type='checkbox' id='dataScriptTest' disabled /></td><td><span id='dataStyleTest'>❌</span></td></tr>
+    <tr><td>HTML Attribute</td><td><img src="/fake.jpg" onerror="inlineScriptTest.checked=true" hidden /><input id="inlineScriptTest" type='checkbox' disabled /></td><td><span style="display:none">❌</span><p hidden style="display:block">✅</p></td></tr>
 </table>
 
 <script>scriptTest.checked=true</script>

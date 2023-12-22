@@ -14,20 +14,27 @@
 <style>
 * {
     font-family: sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color: cadetblue;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 25% calc(25% - 1rem) calc(25% - 1rem) 25%;
+    grid-gap: 1rem;
+    width: calc(100vw - 2rem);
 }
 
 .grid > div {
-    display: inline-block;
-    width: 350px;
     height: 475px;
     background-color: #eee;
-    border: solid 1px #aaa;
     text-align: center;
     overflow:hidden;
-    margin: .5rem;
     text-transform: capitalize;
     line-height: 1.75rem;
     font-size: 1rem;
+    outline: solid 1px #ddd;
 }
 .grid > div > iframe {
     background-color: white;
