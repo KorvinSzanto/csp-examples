@@ -1,1 +1,1 @@
-script-src f.kor.vin; style-src f.kor.vin 'unsafe-inline'; img-src via.placeholder.com
+script-src f.kor.vin; style-src f.kor.vin; img-src via.placeholder.com

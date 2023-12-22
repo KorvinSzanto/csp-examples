@@ -1,0 +1,1 @@
+script-src 'sha256-B+71fdVI456XL7S8mwi2WZ05H9BaJSTUpSnZS0AZPY4='; style-src 'sha256-fGOq9PcaOCzQpZP9DhpeDwXrZ3kjeNsZnP/nyPJ7E2I='

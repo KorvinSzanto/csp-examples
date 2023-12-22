@@ -1,1 +1,0 @@
-script-src 'sha256-B+71fdVI456XL7S8mwi2WZ05H9BaJSTUpSnZS0AZPY4='
