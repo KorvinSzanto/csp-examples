@@ -19,7 +19,7 @@
 .grid > div {
     display: inline-block;
     width: 350px;
-    height: 400px;
+    height: 475px;
     background-color: #eee;
     border: solid 1px #aaa;
     text-align: center;
@@ -31,7 +31,7 @@
 }
 .grid > div > iframe {
     background-color: white;
-    height: calc(400px - 1.75rem);
+    height: calc(475px - 1.75rem);
     width: 100%;
     border: none;
 }
