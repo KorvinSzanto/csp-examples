@@ -1,4 +1,4 @@
-<meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline'">
+<meta http-equiv="Content-Security-Policy" content="default-src &#039;unsafe-inline&#039;">
 
 <table style="color: red">
     <tr><th></th><th></th><th>onload</th><th>onerror</th></tr>
@@ -37,22 +37,25 @@
 <table style="color: red">
     <tr><th></th><th>Script</th><th>Style</th></tr>
     <tr><td width="100%">Inline</td><td><input type='checkbox' id='scriptTest' disabled /></td><td><span id='styleTest'>❌</span></td></tr>
-    <tr><td>Inline with scope</td><td><input type='checkbox' id='scopedScriptTest' disabled /></td><td><span id='scopedStyleTest'>❌</span></td></tr>
+    <tr><td>Inline with nonce</td><td><input type='checkbox' id='scopedScriptTest' disabled /></td><td><span id='scopedStyleTest'>❌</span></td></tr>
+    <tr><td>Inline with hash</td><td><input type='checkbox' id='hashScriptTest' disabled /></td><td><span id='hashStyleTest'>❌</span></td></tr>
     <tr><td>Remote HTTP</td><td><input type='checkbox' id='remoteHttpScriptTest' disabled /></td><td><span id='remoteHttpStyleTest'>❌</span></td></tr>
     <tr><td>Remote HTTPS</td><td><input type='checkbox' id='remoteScriptTest' disabled /></td><td><span id='remoteStyleTest'>❌</span></td></tr>
     <tr><td>Data URL</td><td><input type='checkbox' id='dataScriptTest' disabled /></td><td><span id='dataStyleTest'>❌</span></td></tr>
 </table>
 
 <script>scriptTest.checked=true</script>
-<script scope="randomly-generated-scope">scopedScriptTest.checked=true</script>
-<script src="https://f.kor.vin/remote.js"></script>
-<script src="http://f.kor.vin/remote-http.js"></script>
-<script src="data:application/javascript;base64,ZGF0YVNjcmlwdFRlc3QuY2hlY2tlZD10cnVl"></script>
+<script role="allow-by-nonce" nonce="randomly-generated-nonce">scopedScriptTest.checked=true</script>
+<script role="allow-by-hash">hashScriptTest.checked=true</script>
+<script role="remote-ssl-script" src="https://f.kor.vin/remote.js"></script>
+<script role="remote-http-script" src="http://f.kor.vin/remote-http.js"></script>
+<script role="data-script" src="data:application/javascript;base64,ZGF0YVNjcmlwdFRlc3QuY2hlY2tlZD10cnVl"></script>
 
 <style>#styleTest::after{content:'✅';margin-left:-50%;}</style>
-<style scope="randomly-generated-scope">#scopedStyleTest::after{content:'✅';margin-left:-50%;}</style>
+<style nonce="randomly-generated-nonce">#scopedStyleTest::after{content:'✅';margin-left:-50%;}</style>
+<style nonce="randomly-generated-nonce">#hashStyleTest::after{content:'✅';margin-left:-50%;}</style>
 <link rel="stylesheet" type="text/css" href="https://f.kor.vin/remote.css" />
 <link rel="stylesheet" type="text/css" href="http://f.kor.vin/remote-http.css" />
 <link rel="stylesheet" type="text/css" href="data:text/css;base64,I2RhdGFTdHlsZVRlc3Q6OmFmdGVye2NvbnRlbnQ6J+KchSc7bWFyZ2luLWxlZnQ6LTUwJTt9" />
 
-<hr><strong>Policy:</strong><br><code>default-src 'unsafe-inline'</code>
+<hr><strong>Policy:</strong><br><code>default-src &#039;unsafe-inline&#039;</code>
